@@ -1,0 +1,31 @@
+name: RiasCore
+version: '1.0'
+main: de.satsuya.RiasCore
+api-version: '1.20'
+depend: [LuckPerms]
+author: Satsuya
+
+commands:
+  freeze:
+    description: Freeze or unfreeze a player
+    usage: /freeze <player>
+    permission: riascore.freeze
+  assignworker:
+    description: Add a player to a worker group
+    usage: /assignworker <player>
+    permission: riascore.assignworker
+  removeworker:
+    description: Add a player to a worker group
+    usage: /removeworker <player>
+    permission: riascore.removeworker
+
+permissions:
+  riascore.freeze:
+    description: Allows the player to use the freeze command
+    default: op
+  riascore.assignworker:
+    description: Allows leaders to assign a worker role to a player.
+    default: op
+  riascore.removeworker:
+    description: Allows leaders to remove a worker role from a player.
+    default: op
