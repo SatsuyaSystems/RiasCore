@@ -47,7 +47,7 @@ public final class RiasCore extends JavaPlugin {
 
         getServer().getPluginManager().registerEvents(new PlayerMoveListener(freezeManager), this);
 
-        this.getLogger().info("Everything is ready to rock!");
+        this.getLogger().info("Everything is ready to rock! <3");
     }
 
     @Override
