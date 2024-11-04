@@ -8,7 +8,6 @@ import de.satsuya.listeners.PlayerMoveListener;
 import de.satsuya.managers.ServerManager;
 import net.luckperms.api.LuckPerms;
 import org.bukkit.Bukkit;
-import org.bukkit.Server;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
 import de.satsuya.managers.FreezeManager;

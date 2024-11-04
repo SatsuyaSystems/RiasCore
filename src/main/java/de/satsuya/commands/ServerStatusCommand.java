@@ -1,6 +1,5 @@
 package de.satsuya.commands;
 
-import de.satsuya.managers.FreezeManager;
 import de.satsuya.managers.ServerManager;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;

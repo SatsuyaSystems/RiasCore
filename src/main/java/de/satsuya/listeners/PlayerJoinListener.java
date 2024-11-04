@@ -3,7 +3,6 @@ package de.satsuya.listeners;
 import de.satsuya.RiasCore;
 import de.satsuya.managers.ServerManager;
 import org.bukkit.Bukkit;
-import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
