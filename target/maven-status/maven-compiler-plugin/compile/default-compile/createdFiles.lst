@@ -1,9 +1,12 @@
-de\satsuya\commands\AssignWorkerRoleCommand.class
-de\satsuya\managers\FreezeManager.class
 de\satsuya\commands\FreezeCommand.class
-de\satsuya\listeners\PlayerMoveListener.class
+de\satsuya\listeners\PlayerJoinListener.class
 de\satsuya\CommandLoader.class
+de\satsuya\commands\AssignWorkerRoleCommand.class
+de\satsuya\managers\ServerManager.class
+de\satsuya\managers\FreezeManager.class
+de\satsuya\listeners\PlayerMoveListener.class
 de\satsuya\RiasCore.class
 de\satsuya\commands\PluginCommand.class
 de\satsuya\commands\RemoveWorkerRoleCommand.class
+de\satsuya\commands\ServerStatusCommand.class
 de\satsuya\RiasCore$1.class

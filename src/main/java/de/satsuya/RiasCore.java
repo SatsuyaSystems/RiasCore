@@ -2,9 +2,13 @@ package de.satsuya;
 
 import de.satsuya.commands.AssignWorkerRoleCommand;
 import de.satsuya.commands.RemoveWorkerRoleCommand;
+import de.satsuya.commands.ServerStatusCommand;
+import de.satsuya.listeners.PlayerJoinListener;
 import de.satsuya.listeners.PlayerMoveListener;
+import de.satsuya.managers.ServerManager;
 import net.luckperms.api.LuckPerms;
 import org.bukkit.Bukkit;
+import org.bukkit.Server;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
 import de.satsuya.managers.FreezeManager;
@@ -19,6 +23,7 @@ public final class RiasCore extends JavaPlugin {
     public static LuckPerms luckPerms;
 
     private FreezeManager freezeManager;
+    private ServerManager serverManager;
 
 
     // Leader-to-worker mapping
@@ -40,12 +45,15 @@ public final class RiasCore extends JavaPlugin {
         CommandLoader commandLoader = new CommandLoader(this, Arrays.asList(
                 new FreezeCommand(freezeManager),
                 new AssignWorkerRoleCommand(),
-                new RemoveWorkerRoleCommand()
+                new RemoveWorkerRoleCommand(),
+                new ServerStatusCommand(serverManager)
                 // Add more commands here as needed
         ));
         commandLoader.registerCommands();
 
+        // Register events
         getServer().getPluginManager().registerEvents(new PlayerMoveListener(freezeManager), this);
+        getServer().getPluginManager().registerEvents(new PlayerJoinListener(), this);
 
         this.getLogger().info("Everything is ready to rock! <3");
     }
@@ -59,6 +67,7 @@ public final class RiasCore extends JavaPlugin {
         try {
             Instance = this;
             freezeManager = new FreezeManager();
+            serverManager = new ServerManager();
             luckPerms = Objects.requireNonNull(Bukkit.getServicesManager().getRegistration(LuckPerms.class)).getProvider();
         }catch (Exception e) {
             this.getLogger().severe(e.getMessage());

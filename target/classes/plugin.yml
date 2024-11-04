@@ -18,7 +18,10 @@ commands:
     description: Add a player to a worker group
     usage: /removeworker <player>
     permission: riascore.removeworker
-
+  serverstatus:
+    description: Shows the Server status
+    usage: /serverstatus <open|close|info>
+    permission: riascore.setserverstatus
 permissions:
   riascore.freeze:
     description: Allows the player to use the freeze command
@@ -28,4 +31,10 @@ permissions:
     default: op
   riascore.removeworker:
     description: Allows leaders to remove a worker role from a player.
+    default: op
+  riascore.allowlist:
+    description: Allows a player to join the server while is closed.
+    default: op
+  riascore.setserverstatus:
+    description: Allows a player to change the server status.
     default: op
