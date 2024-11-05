@@ -4,6 +4,7 @@ D:\GitHub\RiasCore\src\main\java\de\satsuya\commands\FreezeCommand.java
 D:\GitHub\RiasCore\src\main\java\de\satsuya\commands\PluginCommand.java
 D:\GitHub\RiasCore\src\main\java\de\satsuya\commands\RemoveWorkerRoleCommand.java
 D:\GitHub\RiasCore\src\main\java\de\satsuya\commands\ServerStatusCommand.java
+D:\GitHub\RiasCore\src\main\java\de\satsuya\listeners\PlayerFishListener.java
 D:\GitHub\RiasCore\src\main\java\de\satsuya\listeners\PlayerJoinListener.java
 D:\GitHub\RiasCore\src\main\java\de\satsuya\listeners\PlayerMoveListener.java
 D:\GitHub\RiasCore\src\main\java\de\satsuya\managers\FreezeManager.java

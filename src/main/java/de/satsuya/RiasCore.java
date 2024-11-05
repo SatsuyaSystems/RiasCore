@@ -3,6 +3,7 @@ package de.satsuya;
 import de.satsuya.commands.AssignWorkerRoleCommand;
 import de.satsuya.commands.RemoveWorkerRoleCommand;
 import de.satsuya.commands.ServerStatusCommand;
+import de.satsuya.listeners.PlayerFishListener;
 import de.satsuya.listeners.PlayerJoinListener;
 import de.satsuya.listeners.PlayerMoveListener;
 import de.satsuya.managers.ServerManager;
@@ -54,6 +55,7 @@ public final class RiasCore extends JavaPlugin {
         // Register events
         getServer().getPluginManager().registerEvents(new PlayerMoveListener(freezeManager), this);
         getServer().getPluginManager().registerEvents(new PlayerJoinListener(), this);
+        getServer().getPluginManager().registerEvents(new PlayerFishListener(), this);
 
         this.getLogger().info("Everything is ready to rock! <3");
     }
