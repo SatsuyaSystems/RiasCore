@@ -15,7 +15,7 @@ public class PlayerFishListener implements Listener {
     @EventHandler
     public void onPlayerFish(final PlayerFishEvent event) {
         if (event.getState() == PlayerFishEvent.State.CAUGHT_FISH) {
-            if (event.getCaught() instanceof ItemStack) {
+            if (event.getCaught() instanceof Item) {
                 Item caughtItem = (Item) event.getCaught();
                 ItemStack itemStack = caughtItem.getItemStack();
                 if (itemStack.getType() == Material.ENCHANTED_BOOK) {
