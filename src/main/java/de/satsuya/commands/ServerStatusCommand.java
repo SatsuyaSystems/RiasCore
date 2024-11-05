@@ -1,8 +1,10 @@
 package de.satsuya.commands;
 
 import de.satsuya.managers.ServerManager;
+import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
+import org.bukkit.entity.Player;
 
 public class ServerStatusCommand implements PluginCommand{
     private final ServerManager serverManager;
@@ -43,6 +45,11 @@ public class ServerStatusCommand implements PluginCommand{
     }
     private void handleClose(CommandSender sender) {
         serverManager.closeServer();
+        for (Player player: Bukkit.getOnlinePlayers()) {
+            if (!player.hasPermission("riascore.allowlist")) {
+                player.kickPlayer("Der Server wurde geschlossen!");
+            }
+        }
         sender.sendMessage("The server is now closed.");
     }
     private void handleInfo(CommandSender sender) {
