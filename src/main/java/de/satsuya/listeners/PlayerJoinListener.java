@@ -18,7 +18,7 @@ public class PlayerJoinListener implements Listener {
             } else {
                 Bukkit.getScheduler().runTaskLater(RiasCore.getPlugin(RiasCore.class), () -> {
                     event.getPlayer().kickPlayer("Der Server ist grade Geschlossen!");
-                }, 30L);
+                }, 10L);
             }
         }
     }

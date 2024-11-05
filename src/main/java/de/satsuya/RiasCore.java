@@ -34,6 +34,7 @@ public final class RiasCore extends JavaPlugin {
         put("zunftmeister_wachen", "wache");
         put("zunftmeister_holzfäller", "holzfäller");
         put("zunftmeister_sammler", "Sammler");
+        put("zunftmeister_fischer", "fischer");
     }};
 
     @Override
