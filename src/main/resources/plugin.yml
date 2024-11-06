@@ -22,6 +22,10 @@ commands:
     description: Shows the Server status
     usage: /serverstatus <open|close|info>
     permission: riascore.setserverstatus
+  resetdeaths:
+    description: Shows the Server status
+    usage: /resetdeaths <player>
+    permission: riascore.resetdeaths
 permissions:
   riascore.freeze:
     description: Allows the player to use the freeze command
@@ -37,4 +41,7 @@ permissions:
     default: op
   riascore.setserverstatus:
     description: Allows a player to change the server status.
+    default: op
+  riascore.schmied:
+    description: Allows crafting for armor and tools
     default: op

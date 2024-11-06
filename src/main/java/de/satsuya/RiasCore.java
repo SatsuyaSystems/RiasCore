@@ -1,17 +1,17 @@
 package de.satsuya;
 
-import de.satsuya.commands.AssignWorkerRoleCommand;
-import de.satsuya.commands.RemoveWorkerRoleCommand;
-import de.satsuya.commands.ServerStatusCommand;
+import de.satsuya.commands.*;
+import de.satsuya.listeners.PlayerFishListener;
 import de.satsuya.listeners.PlayerJoinListener;
 import de.satsuya.listeners.PlayerMoveListener;
+import de.satsuya.listeners.RecipePermissionListener;
 import de.satsuya.managers.ServerManager;
 import net.luckperms.api.LuckPerms;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
 import de.satsuya.managers.FreezeManager;
-import de.satsuya.commands.FreezeCommand;
+
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
@@ -46,7 +46,8 @@ public final class RiasCore extends JavaPlugin {
                 new FreezeCommand(freezeManager),
                 new AssignWorkerRoleCommand(),
                 new RemoveWorkerRoleCommand(),
-                new ServerStatusCommand(serverManager)
+                new ServerStatusCommand(serverManager),
+                new ResetDeathsCommand()
                 // Add more commands here as needed
         ));
         commandLoader.registerCommands();
@@ -54,6 +55,8 @@ public final class RiasCore extends JavaPlugin {
         // Register events
         getServer().getPluginManager().registerEvents(new PlayerMoveListener(freezeManager), this);
         getServer().getPluginManager().registerEvents(new PlayerJoinListener(), this);
+        getServer().getPluginManager().registerEvents(new RecipePermissionListener(), this);
+        getServer().getPluginManager().registerEvents(new PlayerFishListener(), this);
 
         this.getLogger().info("Everything is ready to rock! <3");
     }

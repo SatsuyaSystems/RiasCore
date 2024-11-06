@@ -1,6 +1,9 @@
+de\satsuya\commands\ResetDeathsCommand.class
 de\satsuya\commands\FreezeCommand.class
 de\satsuya\listeners\PlayerJoinListener.class
 de\satsuya\CommandLoader.class
+de\satsuya\listeners\RecipePermissionListener.class
+de\satsuya\listeners\PlayerFishListener.class
 de\satsuya\commands\AssignWorkerRoleCommand.class
 de\satsuya\managers\ServerManager.class
 de\satsuya\managers\FreezeManager.class
