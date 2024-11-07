@@ -6,6 +6,7 @@ D:\GitHub\RiasCore\src\main\java\de\satsuya\commands\RemoveWorkerRoleCommand.jav
 D:\GitHub\RiasCore\src\main\java\de\satsuya\commands\ResetDeathsCommand.java
 D:\GitHub\RiasCore\src\main\java\de\satsuya\commands\ServerStatusCommand.java
 D:\GitHub\RiasCore\src\main\java\de\satsuya\listeners\PlayerFishListener.java
+D:\GitHub\RiasCore\src\main\java\de\satsuya\listeners\PlayerInteractListener.java
 D:\GitHub\RiasCore\src\main\java\de\satsuya\listeners\PlayerJoinListener.java
 D:\GitHub\RiasCore\src\main\java\de\satsuya\listeners\PlayerMoveListener.java
 D:\GitHub\RiasCore\src\main\java\de\satsuya\listeners\RecipePermissionListener.java

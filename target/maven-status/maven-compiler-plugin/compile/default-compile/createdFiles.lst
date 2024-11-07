@@ -7,6 +7,7 @@ de\satsuya\listeners\PlayerFishListener.class
 de\satsuya\commands\AssignWorkerRoleCommand.class
 de\satsuya\managers\ServerManager.class
 de\satsuya\managers\FreezeManager.class
+de\satsuya\listeners\PlayerInteractListener.class
 de\satsuya\listeners\PlayerMoveListener.class
 de\satsuya\RiasCore.class
 de\satsuya\commands\PluginCommand.class

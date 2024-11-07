@@ -1,10 +1,7 @@
 package de.satsuya;
 
 import de.satsuya.commands.*;
-import de.satsuya.listeners.PlayerFishListener;
-import de.satsuya.listeners.PlayerJoinListener;
-import de.satsuya.listeners.PlayerMoveListener;
-import de.satsuya.listeners.RecipePermissionListener;
+import de.satsuya.listeners.*;
 import de.satsuya.managers.ServerManager;
 import net.luckperms.api.LuckPerms;
 import org.bukkit.Bukkit;
@@ -57,6 +54,7 @@ public final class RiasCore extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new PlayerJoinListener(), this);
         getServer().getPluginManager().registerEvents(new RecipePermissionListener(), this);
         getServer().getPluginManager().registerEvents(new PlayerFishListener(), this);
+        getServer().getPluginManager().registerEvents(new PlayerInteractListener(), this);
 
         this.getLogger().info("Everything is ready to rock! <3");
     }

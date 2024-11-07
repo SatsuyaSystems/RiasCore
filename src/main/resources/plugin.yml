@@ -45,3 +45,6 @@ permissions:
   riascore.schmied:
     description: Allows crafting for armor and tools
     default: op
+  riascore.fishing:
+    description: Allows to fish
+    default: op
